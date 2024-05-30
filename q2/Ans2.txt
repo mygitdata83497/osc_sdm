@@ -1,0 +1,259 @@
+1.List the directory contents date wise sorted. ( man ls)
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ ls -ltr
+total 64
+-rw-rw-r--  1 sunbeam sunbeam    93 Mar 18 17:49  my1prog.cpp
+-rw-rw-r--  1 sunbeam sunbeam   260 Mar 18 18:05  day1.cpp
+-rw-rw-r--  1 sunbeam sunbeam   437 Mar 19 15:52  Da.cpp
+-rw-rw-r--  1 sunbeam sunbeam   217 Mar 19 18:26  hallo.cpp
+-rwxrwxr-x  1 sunbeam sunbeam 18432 Mar 24 13:37  a.out
+-rw-rw-r--  1 sunbeam sunbeam  4570 Mar 25 14:19  Que1.cpp
+-rw-rw-r--  1 sunbeam sunbeam  4856 Mar 25 19:18  Assignment6_2.cpp
+-rw-rw-r--  1 sunbeam sunbeam   521 Mar 27 16:14  mydemo1.cpp
+drwxrwxr-x  2 sunbeam sunbeam  4096 Mar 30 20:39 'pune cpp solution'
+drwxrwxr-x 12 sunbeam sunbeam  4096 Mar 30 20:39  Assignments
+
+
+2.List the directory contents size wise sorted.(man ls)
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ ls -lS
+total 64
+-rwxrwxr-x  1 sunbeam sunbeam 18432 Mar 24 13:37  a.out
+-rw-rw-r--  1 sunbeam sunbeam  4856 Mar 25 19:18  Assignment6_2.cpp
+-rw-rw-r--  1 sunbeam sunbeam  4570 Mar 25 14:19  Que1.cpp
+drwxrwxr-x 12 sunbeam sunbeam  4096 Mar 30 20:39  Assignments
+drwxrwxr-x  2 sunbeam sunbeam  4096 Mar 30 20:39 'pune cpp solution'
+-rw-rw-r--  1 sunbeam sunbeam   521 Mar 27 16:14  mydemo1.cpp
+-rw-rw-r--  1 sunbeam sunbeam   437 Mar 19 15:52  Da.cpp
+-rw-rw-r--  1 sunbeam sunbeam   260 Mar 18 18:05  day1.cpp
+-rw-rw-r--  1 sunbeam sunbeam   217 Mar 19 18:26  hallo.cpp
+-rw-rw-r--  1 sunbeam sunbeam    93 Mar 18 17:49  my1prog.cpp
+
+
+3.List directory contents along with their inode no. (man ls)
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ ls -li
+total 64
+7476088 -rwxrwxr-x  1 sunbeam sunbeam 18432 Mar 24 13:37  a.out
+7475194 -rw-rw-r--  1 sunbeam sunbeam  4856 Mar 25 19:18  Assignment6_2.cpp
+7499263 drwxrwxr-x 12 sunbeam sunbeam  4096 Mar 30 20:39  Assignments
+7494716 -rw-rw-r--  1 sunbeam sunbeam   437 Mar 19 15:52  Da.cpp
+7494533 -rw-rw-r--  1 sunbeam sunbeam   260 Mar 18 18:05  day1.cpp
+7495430 -rw-rw-r--  1 sunbeam sunbeam   217 Mar 19 18:26  hallo.cpp
+7493787 -rw-rw-r--  1 sunbeam sunbeam    93 Mar 18 17:49  my1prog.cpp
+7473703 -rw-rw-r--  1 sunbeam sunbeam   521 Mar 27 16:14  mydemo1.cpp
+7489947 drwxrwxr-x  2 sunbeam sunbeam  4096 Mar 30 20:39 'pune cpp solution'
+7473962 -rw-rw-r--  1 sunbeam sunbeam  4570 Mar 25 14:19  Que1.cpp
+
+
+4.List the contents of the subdirectory.
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ ls -d */
+ Assignments/  'pune cpp solution/'
+
+
+5.Create a file, write your surname and name in it and save.
+i. now open the same file and add your address in it and save.
+ii. reopen the same file and check your name and address in it.
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ touch name.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ cat > name.txt
+Joshi Abhishek
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ cat name.txt
+Joshi Abhishek
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ cat >> name.txt
+Rukmini Park,Karad
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ cat name.txt
+Joshi Abhishek
+Rukmini Park,Karad
+
+
+6.how to change the time stamp of file (man touch)
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ man touch
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ ls -lt name.txt
+-rw-rw-r-- 1 sunbeam sunbeam 34 May 20 18:40 name.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ touch -t 20200711 name.txt
+touch: invalid date format ‘20200711’
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ touch -t 202007111133 name.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ ls -lt name.txt
+-rw-rw-r-- 1 sunbeam sunbeam 34 Jul 11  2020 name.txt
+
+
+7. Create directory structure : Give following commands ,
+-> mkdir one
+-> cd one
+-> touch 1.txt 11.txt 111.txt
+-> mkdir two
+-> cd two
+-> touch 2.txt 22.txt 222.txt
+-> mkdir three
+-> cd three
+-> touch 3.txt 33.txt 333.txt
+-> mkdir four
+-> cd four
+-> touch 4.txt 44.txt 444.txt
+-> mkdir five
+-> cd five
+-> touch 5.txt 55.txt 555.txt
+-> cd ~ (i.e. go to your home directory)
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ mkdir one
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP$ cd one
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one$ touch 1.txt 11.txt 111.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one$ mkdir two
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one$ cd two
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two$ touch 2.txt 22.txt 222.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two$ mkdir three 
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two$ cd three
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three$ touch 3.txt 33.txt 333.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three$ mkdir four
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three$ cd four
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four$ touch 4.txt 44.txt 444.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four$ mkdir five
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four$ cd five
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four/five$ touch 5.txt 55.txt 555.txt
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four/five$ cd ~
+sunbeam@sunbeam-abhishek:~$ 
+
+
+8. Considering above directory structure , Do following operations :
+i. list the directory contents of directory named "five" from current directory (i.e. home directory).
+Answer=>
+sunbeam@sunbeam-abhishek:~$ ls Documents/
+Abhi git Data/     Abhi's wpt/        my git token/      
+abhi's CPP/        java/              osc_sdm/           
+Abhi's DBT Module/ my_GitData/        sunbeam git data/  
+sunbeam@sunbeam-abhishek:~$ ls Documents/abhi\'s\ CPP/
+a.out              Da.cpp             my1prog.cpp        one/
+Assignment6_2.cpp  day1.cpp           mydemo1.cpp        pune cpp solution/
+Assignments/       hallo.cpp          name.txt           Que1.cpp
+sunbeam@sunbeam-abhishek:~$ ls Documents/abhi\'s\ CPP/
+a.out              Da.cpp             my1prog.cpp        one/
+Assignment6_2.cpp  day1.cpp           mydemo1.cpp        pune cpp solution/
+Assignments/       hallo.cpp          name.txt           Que1.cpp
+sunbeam@sunbeam-abhishek:~$ ls Documents/abhi\'s\ CPP/one/
+111.txt  11.txt   1.txt    two/     
+sunbeam@sunbeam-abhishek:~$ ls Documents/abhi\'s\ CPP/one/two/three/four/five/
+555.txt  55.txt  5.txt
+
+
+ii. write your name in a file named "44.txt" of directory "four" from current directory.
+Answer=>
+sunbeam@sunbeam-abhishek:~$ cat > 44.txt
+Abhishek
+sunbeam@sunbeam-abhishek:~$ cat 44.txt
+Abhishek
+
+
+iii. remove the file named "555.txt" from directory "five" from current directory.
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four/five$ rm 555.txt
+
+
+iv. change directory to five one/two/three/four/five/ ).
+Answer=>
+sunbeam@sunbeam-abhishek:~$ cd Documents/abhi\'s\ CPP/one/two/three/four/five
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four/five$ 
+
+
+v. write your course name in file named "3.txt" which resides in directory "three" from current directory (i.e.five).also read the same file.
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two/three/four/five$ cat 3.txt
+dac
+
+
+vi. list the contents of directory "two" from current directory (i.e. five).
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one$ ls two -R
+two:
+222.txt  22.txt  2.txt  three
+
+two/three:
+333.txt  33.txt  3.txt  four
+
+two/three/four:
+444.txt  44.txt  4.txt  five
+
+two/three/four/five:
+3.txt  55.txt  5.txt
+
+
+vii. remove file named "222.txt" which belongs to directory "two" from current directory (i.e. five)
+Answer=>
+sunbeam@sunbeam-abhishek:~/Documents/abhi's CPP/one/two$ rm 222.txt
+
+
+viii. now change the directory to "one"
+Answer=>
+cd one
+
+
+ix. remove all files only from directory named "five" from current directory (i.e. one)
+Answer=>
+rm 5.txt 55.txt 555.txt
+
+
+x. remove directory named "five" from current directory(i.e. one)
+Answer=>
+rm five
+
+
+xi. remove whole directory named "four" from current directory (i.e. one)
+Answer=>
+rm four
+
+
+xii. change to your home directory.
+Answer=>
+cd ~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
